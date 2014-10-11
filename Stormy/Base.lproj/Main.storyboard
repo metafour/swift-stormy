@@ -1,25 +1,173 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="weathericons-regular-webfont.ttf">
+            <string>WeatherIcons-Regular</string>
+            <string>WeatherIcons-Regular</string>
+            <string>WeatherIcons-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Stormy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp1-KU-Qd2">
+                                <rect key="frame" x="103" y="71" width="114" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="Dlf-dL-H5G"/>
+                                    <constraint firstAttribute="height" constant="100" id="qYQ-dB-eQY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="100"/>
+                                <color key="textColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BK0-Le-FwH">
+                                <rect key="frame" x="35" y="198" width="250.5" height="172"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="150"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUMIDITY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1d-nh-39q">
+                                <rect key="frame" x="56" y="377" width="57.5" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RAIN?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N8-wR-N7Y">
+                                <rect key="frame" x="229.5" y="377" width="34.5" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-iq-toM">
+                                <rect key="frame" x="63" y="401" width="43" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.70" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul0-8p-25s">
+                                <rect key="frame" x="225" y="401" width="43" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stormy and rainy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71n-A9-hDg">
+                                <rect key="frame" x="80" y="452" width="161" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At 5:18 AM it is..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-MA-t8C">
+                                <rect key="frame" x="101" y="196" width="119" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hermosa Beach, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byk-1b-fvQ">
+                                <rect key="frame" x="68" y="40" width="195" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEELS LIKE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8t-uj-KrU">
+                                <rect key="frame" x="132" y="377" width="64.5" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4F-Xr-PSg">
+                                <rect key="frame" x="142" y="401" width="37" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zer-fg-KAX">
+                                <rect key="frame" x="145" y="479" width="30" height="44"/>
+                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="22"/>
+                                <state key="normal" title="">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshWeatherData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="he4-Px-nvT"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="2ZK-KM-W8e">
+                                <rect key="frame" x="150" y="195" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym0-NE-WV6">
+                                <rect key="frame" x="285.5" y="219" width="12.5" height="32"/>
+                                <fontDescription key="fontDescription" name="WeatherIcons-Regular" family="Weather Icons" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cyan="1" magenta="0.090409128289473686" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ul0-8p-25s" firstAttribute="top" secondItem="3N8-wR-N7Y" secondAttribute="bottom" constant="10" id="1LU-kn-4sd"/>
+                            <constraint firstItem="Ym0-NE-WV6" firstAttribute="leading" secondItem="BK0-Le-FwH" secondAttribute="trailing" id="2mW-qO-udM"/>
+                            <constraint firstItem="byk-1b-fvQ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="63N-y5-wLc"/>
+                            <constraint firstItem="2ZK-KM-W8e" firstAttribute="centerX" secondItem="bAg-MA-t8C" secondAttribute="centerX" id="6Ac-MF-dQz"/>
+                            <constraint firstAttribute="centerX" secondItem="N8t-uj-KrU" secondAttribute="centerX" constant="-4.5" id="6UX-Zo-e03"/>
+                            <constraint firstItem="BK0-Le-FwH" firstAttribute="top" secondItem="bAg-MA-t8C" secondAttribute="bottom" constant="-17" id="9zj-jF-WcI"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3N8-wR-N7Y" secondAttribute="bottom" constant="177" id="A1X-Es-1ZK"/>
+                            <constraint firstAttribute="centerX" secondItem="71n-A9-hDg" secondAttribute="centerX" constant="-0.5" id="CY5-si-suF"/>
+                            <constraint firstAttribute="centerX" secondItem="Lp1-KU-Qd2" secondAttribute="centerX" constant="-0.75" id="FPr-fg-i1H"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zer-fg-KAX" secondAttribute="bottom" constant="45" id="G7a-Qw-Yhi"/>
+                            <constraint firstItem="2e9-iq-toM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="47" id="G7w-80-UyH"/>
+                            <constraint firstAttribute="centerX" secondItem="g4F-Xr-PSg" secondAttribute="centerX" constant="-0.5" id="Ikf-9z-NKW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="W1d-nh-39q" secondAttribute="bottom" constant="177" id="JQq-WT-EyY"/>
+                            <constraint firstAttribute="centerX" secondItem="zer-fg-KAX" secondAttribute="centerX" id="LiF-mY-hAr"/>
+                            <constraint firstItem="2ZK-KM-W8e" firstAttribute="centerY" secondItem="bAg-MA-t8C" secondAttribute="centerY" id="PQx-qp-Jvo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3N8-wR-N7Y" secondAttribute="trailing" constant="40" id="QaK-zA-Xxy"/>
+                            <constraint firstItem="bAg-MA-t8C" firstAttribute="top" secondItem="Lp1-KU-Qd2" secondAttribute="bottom" constant="25" id="R3S-rq-gD3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ul0-8p-25s" secondAttribute="trailing" constant="36" id="TEG-NI-NFA"/>
+                            <constraint firstItem="g4F-Xr-PSg" firstAttribute="top" secondItem="N8t-uj-KrU" secondAttribute="bottom" constant="10" id="TrO-ME-bV2"/>
+                            <constraint firstAttribute="centerY" secondItem="BK0-Le-FwH" secondAttribute="centerY" id="XZU-7Q-J8T"/>
+                            <constraint firstItem="W1d-nh-39q" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="YSv-su-39H"/>
+                            <constraint firstAttribute="centerX" secondItem="bAg-MA-t8C" secondAttribute="centerX" constant="-0.5" id="biF-V1-cXH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="N8t-uj-KrU" secondAttribute="bottom" constant="177" id="bkc-Sf-lWx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="71n-A9-hDg" secondAttribute="bottom" constant="90" id="gsH-yI-vtD"/>
+                            <constraint firstItem="BK0-Le-FwH" firstAttribute="top" secondItem="Ym0-NE-WV6" secondAttribute="bottom" constant="-53" id="la7-fT-8hJ"/>
+                            <constraint firstItem="2e9-iq-toM" firstAttribute="top" secondItem="W1d-nh-39q" secondAttribute="bottom" constant="10" id="mmz-zf-rgY"/>
+                            <constraint firstAttribute="centerX" secondItem="byk-1b-fvQ" secondAttribute="centerX" constant="-5.5" id="pCU-MC-b5H"/>
+                            <constraint firstAttribute="centerX" secondItem="BK0-Le-FwH" secondAttribute="centerX" constant="-0.5" id="sss-et-Icd"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="currentHumidityLabel" destination="2e9-iq-toM" id="BKX-1Q-6h9"/>
+                        <outlet property="currentPrecipLabel" destination="Ul0-8p-25s" id="7Yg-3j-Lgd"/>
+                        <outlet property="currentSummaryLabel" destination="71n-A9-hDg" id="h0V-p6-M9F"/>
+                        <outlet property="currentTempLabel" destination="BK0-Le-FwH" id="iHS-ip-KXe"/>
+                        <outlet property="currentTimeLabel" destination="bAg-MA-t8C" id="fps-53-uqJ"/>
+                        <outlet property="feelsLikeLabel" destination="g4F-Xr-PSg" id="U5y-Bd-eEN"/>
+                        <outlet property="refreshActivityIndicator" destination="2ZK-KM-W8e" id="Tpc-qu-2TL"/>
+                        <outlet property="refreshButton" destination="zer-fg-KAX" id="L5X-Yb-fWV"/>
+                        <outlet property="weatherIconLabel" destination="Lp1-KU-Qd2" id="rbK-hp-azG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="21" y="360"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

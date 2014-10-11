@@ -13,6 +13,11 @@
 		01165ADC19E6103800CE3867 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01165ADB19E6103800CE3867 /* Images.xcassets */; };
 		01165ADF19E6103800CE3867 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01165ADD19E6103800CE3867 /* LaunchScreen.xib */; };
 		01165AEB19E6103800CE3867 /* StormyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01165AEA19E6103800CE3867 /* StormyTests.swift */; };
+		01825A6119E7674300F33C95 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01825A6019E7674300F33C95 /* Current.swift */; };
+		01825A6419E7682F00F33C95 /* WeatherIcons-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 01825A6319E7682F00F33C95 /* WeatherIcons-Regular.otf */; };
+		01825A6619E7684F00F33C95 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01825A6519E7684F00F33C95 /* weathericons-regular-webfont.ttf */; };
+		01825A6719E768B200F33C95 /* weathericons-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01825A6519E7684F00F33C95 /* weathericons-regular-webfont.ttf */; };
+		01825A6819E768B200F33C95 /* WeatherIcons-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 01825A6319E7682F00F33C95 /* WeatherIcons-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,9 @@
 		01165AE419E6103800CE3867 /* StormyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StormyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01165AE919E6103800CE3867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01165AEA19E6103800CE3867 /* StormyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormyTests.swift; sourceTree = "<group>"; };
+		01825A6019E7674300F33C95 /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		01825A6319E7682F00F33C95 /* WeatherIcons-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WeatherIcons-Regular.otf"; sourceTree = "<group>"; };
+		01825A6519E7684F00F33C95 /* weathericons-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "weathericons-regular-webfont.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				01165AD119E6103800CE3867 /* Stormy */,
+				01825A6219E7676700F33C95 /* Resources */,
 				01165AE719E6103800CE3867 /* StormyTests */,
 				01165AD019E6103800CE3867 /* Products */,
 			);
@@ -77,6 +86,7 @@
 		01165AD119E6103800CE3867 /* Stormy */ = {
 			isa = PBXGroup;
 			children = (
+				01825A6019E7674300F33C95 /* Current.swift */,
 				01165AD419E6103800CE3867 /* AppDelegate.swift */,
 				01165AD619E6103800CE3867 /* ViewController.swift */,
 				01165AD819E6103800CE3867 /* Main.storyboard */,
@@ -110,6 +120,16 @@
 				01165AE919E6103800CE3867 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01825A6219E7676700F33C95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01825A6519E7684F00F33C95 /* weathericons-regular-webfont.ttf */,
+				01825A6319E7682F00F33C95 /* WeatherIcons-Regular.otf */,
+			);
+			name = Resources;
+			path = Stormy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +214,8 @@
 			files = (
 				01165ADA19E6103800CE3867 /* Main.storyboard in Resources */,
 				01165ADF19E6103800CE3867 /* LaunchScreen.xib in Resources */,
+				01825A6419E7682F00F33C95 /* WeatherIcons-Regular.otf in Resources */,
+				01825A6619E7684F00F33C95 /* weathericons-regular-webfont.ttf in Resources */,
 				01165ADC19E6103800CE3867 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01825A6719E768B200F33C95 /* weathericons-regular-webfont.ttf in Resources */,
+				01825A6819E768B200F33C95 /* WeatherIcons-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01825A6119E7674300F33C95 /* Current.swift in Sources */,
 				01165AD719E6103800CE3867 /* ViewController.swift in Sources */,
 				01165AD519E6103800CE3867 /* AppDelegate.swift in Sources */,
 			);
@@ -337,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Stormy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Stormy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -365,6 +392,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = StormyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stormy.app/Stormy";
@@ -380,6 +408,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = StormyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stormy.app/Stormy";
@@ -405,6 +434,7 @@
 				01165AF019E6103800CE3867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01165AF119E6103800CE3867 /* Build configuration list for PBXNativeTarget "StormyTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +443,7 @@
 				01165AF319E6103800CE3867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
